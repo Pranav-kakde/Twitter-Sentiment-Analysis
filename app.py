@@ -32,7 +32,7 @@ def predict_sentiment(text, model, vectorizer, stop_words):
     text = vectorizer.transform(text)
 
     sentiment = model.predict(text)
-    return "Negative" if sentiment == 0 else "Positive"
+    return "Positive" if sentiment == 0 else "Negative"
 
 # Initialize scraper
 @st.cache_resource
